@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ocak1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<section class="hero-section">
+  <div class="main">
+    <div class="logo">LOGO</div>
+
+    <div class="hamburger-menu" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">WEB</a></li>
+        <li><a href="#">VISION</a></li>
+        <li><a href="#">TIMEZONE</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="hero-content">
+    <h1>Geleceği Birlikte Tasarlayalım</h1>
+    <p>Modern çözümler, vizyoner yaklaşımlar ve kusursuz deneyimler.</p>
+    <a href="#" class="cta-button">Hemen Başla</a>
+  </div>
+</section>
+
+<!--2.Bölüm Başlıyor-->
+
+<section class="features-section">
+    <div class="container">
+        <div class="hero-text">
+            <h1>UI & UX <span class="highlight">Web Tasarım</span></h1>
+            <p>Kullanıcı deneyimi dikkate alınarak tasarlanmış, tüm cihazlara duyarlı ve arama optimizasyonu yapılmış, hedef kitlenin önüne çıkabilen web çalışmaları için benimle irtibata geçebilirsiniz.</p>
+            <a href="#" class="btn-referans">Referanslar</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/webdesign-fpik.jpg" alt="Web Tasarım Arayüzü">
+        </div>
+    </div>
+</section>
+
+<!--2.Bölüm Bitişi---------------------------------------------  -->
+
+<!--3.Bölüm Başlıyor ------------------------------------------ -->
+
+<section class="services-section">
+    <div class="services-container">
+            
+        <div class="service-card">
+            <div class="icon-box"><i class="fa-solid fa-desktop"></i></div>
+            <h3>WEB DESIGN</h3>
+            <p>Ziyaretçiye kolay kullanım deneyimi sunan ve arama sonuçlarında müşteri kitlesinin bulabileceği...</p>
+        </div>
+
+        <div class="service-card highlight">
+            <div class="icon-box"><i class="fa-solid fa-box"></i></div>
+            <h3>3D DESIGN</h3>
+            <p>Günümüzde 3d çalışmaları yaygınlaşmaktadır, inşaat, medikal, dekorasyon gibi bir çok alanda...</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-box"><i class="fa-solid fa-video"></i></div>
+            <h3>VIDEO KURGU</h3>
+            <p>Okumaktan çok izlemeyi tercih eden bir toplum yapısına sahibiz, bu da video üretiminin önemini...</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+            <h3>MOBILE FIRST</h3>
+            <p>UI kullanıcı arayüzü ve UX kullanıcı deneyimi konusunda çalışmalarımı görmek için mesaj yazarak...</p>
+        </div>
+            
+        </div>
+    </section>
+
+<!--3.Bölüm Bitişi-->
+
+<!--4.Bölüm Başlangıcı  (AR) -->
+
+<section class="ar-section">
+    <div class="content">
+        <h1>Artırılmış <span>Gerçeklik</span></h1>
+        <p>Ar uygulama yani artırılmış gerçeklik (Augmented Reality) mağaza kıyafet uygulaması, inşaat örnek model, ürün bilgilendirme, medikal ve daha bir çok alanda kullanılmaktadır. Örnek uygulamayı indirip deneyimleyebilirsiniz.</p>
+        <a href="#" class="btn-example">Örnek Uygulama</a>
+    </div>
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="images/iphone.jpg" alt="AR Uygulaması">
+        </div>
+    </div>
+</section>
+
+<!--4.Bölüm Bitişi  (AR) -->
+
+<!--Javascript Başlıyor-->
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+<!--Javascript Bitiyor-->
+    
+</body>
+</html>
