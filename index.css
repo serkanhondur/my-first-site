@@ -1,0 +1,425 @@
+:root {
+    --primary-orange: #fbb017;
+    --text-gray: #555;
+    --heading-dark: #444;
+}
+
+*{
+  margin:0;
+  padding:0;
+  font-family: Verdana;
+  box-sizing: border-box; /* Bunu ekle */
+}
+
+.hero-section{
+  width:100%;
+  background-color: #f39c12;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.main {
+  width: 100%;
+  max-width: 1200px; /* İçeriğin çok yayılmasını engeller */
+  display: flex;
+  justify-content: space-between; /* Logo solda, linkler sağda */
+  align-items: center;
+  padding: 0 20px; /* Padding'i burada tutabilirsin artık */
+  margin: 0 auto; /* Ortalamayı garantiye al */
+}
+
+.logo{
+  margin-left: 0;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-links a:hover{
+  transition:0.3s ease;
+  color:#008000;
+}
+
+/* --- Masaüstünde Hamburgeri Gizle --- */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}    
+/* --- Masaüstünde Hamburgerin Bitişi --- */
+
+.hero-section {
+  width: 100%;
+  min-height: 100vh; /* Ekranın tamamını kaplaması için */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; /* Navbar üstte, içerik altta olsun diye */
+  color: white;
+}
+
+.hero-content {
+  flex: 1; /* Kalan tüm boşluğu kapla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Dikeyde ortala */
+  align-items: center; /* Yatayda ortala */
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #ff4757;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e84118;
+}
+
+/* <!--2.Bölüm Başlıyor--> --------------------------- */
+
+.features-section {
+    background-color: #f5f5f5; /* Arka plan rengi */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Sayfayı ortalamaya devam etsin */
+    padding: 0 60px; /* Sağ ve soldan 40px iç boşluk verir */
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Sol Metin Alanı */
+.hero-text {
+    flex: 1; /* Alanın yarısını kapla */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #f39c12; /* Tasarımdaki sarı tonu */
+}
+
+.hero-text p {
+    font-size: 1.0rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Buton Tasarımı */
+.btn-referans {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+    transition: 0.3s;
+}
+
+.btn-referans:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.5);
+}
+
+/* Sağ Görsel Alanı */
+.hero-image {
+    flex: 1.2; /* Görsel alanına biraz daha fazla yer verelim */
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Hafif derinlik */
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 992px) {
+    /* Sadece yeni isimlendirdiğin bölüme (örneğin .features-section) özel yapmak istersen: */
+    .features-section .container {
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .features-section .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Mobilde ikon görünsün */
+        margin-right: 20px;
+    }
+
+    .nav-links {
+        display: none; /* Varsayılan olarak menü kapalı */
+        position: absolute;
+        top: 70px; /* Navbar yüksekliğine göre ayarla */
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: block; /* JS ile bu class eklenince açılacak */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+/*  <!--2.Bölüm Bitişi-->  */
+/*------------------------------------------------------------------*/
+/*  <!--3.Bölüm Başlangıcı-->  */
+
+.services-container {
+    display: grid;
+    /* 280px yerine 1fr kullanarak kutuların esnek olmasını sağla */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* ÖNEMLİ: Padding'i genişliğe dahil eder */
+}
+
+.service-card {
+    /* Artık burada genişlik belirtmene gerek yok, Grid hallediyor */
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd; /* Kutuları görmek için geçici eklenebilir */
+}
+
+/* İkonlar */
+.icon-box {
+    font-size: 34px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Başlıklar */
+.service-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Açıklama Metni */
+.service-card p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #777;
+}
+
+/* Görseldeki Sarı Vurgulu (3D Tasarım) Bölümü */
+.service-card.highlight .icon-box,
+.service-card.highlight h3 {
+    color: #f1b418; /* Görseldeki turuncu-sarı tonu */
+}
+
+/* Responsive: Ekran küçüldüğünde kartlar düzgün dizilsin */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Responsive: Mobilde sola çok yapışıyor  */
+@media (max-width: 768px) {
+    .services-container {
+        /* 1. Izgarayı tek sütuna düşür */
+        grid-template-columns: 1fr; 
+        
+        /* 2. Grid elemanlarını yatayda ortala */
+        justify-items: center; 
+        
+        /* 3. Kenarlardan ekranın dibine yapışmaması için boşluk bırak */
+        padding: 0 20px; 
+        
+        /* 4. Varsa genişlik sınırlamasını kaldır veya ekranı kaplat */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .service-card {
+        /* 5. Kartların mobilde çok küçük kalmasını önle */
+        width: 100%; 
+        max-width: 320px; /* Çok yayılmasın ama merkezde dursun */
+        
+        /* 6. Kartı kendi içinde ortala */
+        margin: 0 auto; 
+        
+        /* 7. Alt alta biniyorlarsa aralarını aç */
+        margin-bottom: 30px; 
+    }
+}   /* Service-card Mobilde sola çok yapışıyordu, onu çözdük  */
+
+/*  <!--3.Bölüm Bitişi-->  */
+
+/*  <!--4.Bölüm Başlangıç (AR)-->  */
+
+.ar-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    gap: 40px;
+}
+
+.content {
+    flex: 1;
+}
+
+.content h1 {
+    font-size: 45px;
+    color: var(--heading-dark);
+    margin-bottom: 20px;
+}
+
+.content h1 span {
+    color: var(--primary-orange);
+}
+
+.content p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Turuncu Buton */
+.btn-example {
+    background-color: var(--primary-orange);
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px; /* Tam yuvarlak köşeler */
+    font-size: 20px;
+    font-weight: 500;
+    transition: transform 0.2s, background-color 0.2s;
+    display: inline-block;
+}
+
+/* Sağdaki Resim Alanı */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .ar-section {
+        flex-direction: column; /* Yan yana olan yapıyı alt alta çevirir */
+        text-align: center;    /* Metinleri ortalar */
+        padding: 40px 20px;    /* Mobilde yan boşlukları azaltır */
+        gap: 20px;             /* Resim ile yazı arasındaki boşluğu korur */
+    }
+
+    .content h1 {
+        font-size: 28px;      /* 45px'den daha makul bir boyuta çektik */
+        line-height: 1.2;     /* Satır arası çok açılmasın */
+    }
+
+    .content p {
+        margin: 0 auto 30px;  /* Yazıyı ortalar ve butonla arasını açar */
+    }
+
+    .image-container {
+        width: 100%;          /* Resmin tam genişlik kaplamasını sağlar */
+    }
+}
+
+/* Dokunmatik cihazlarda hover efektini devre dışı bırakır, 
+   sadece mouse kullananlarda çalışır */
+@media (hover: hover) {
+    .btn-example:hover {
+        background-color: #e59a00;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(243, 156, 18, 0.5); /* Eğer referans butonundaki gibi gölge istersen */
+    }
+}
+
+    .btn-example:active {
+    background-color: #d48b00; /* Tıklama anında biraz daha koyulaşır */
+    transform: scale(0.98);    /* Hafifçe içeri gömülme efekti verir */
+}
+
+/*  <!--4.Bölüm Bitişi  (AR) -->  */
