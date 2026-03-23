@@ -26,7 +26,8 @@
   justify-content: space-between; /* Logo solda, linkler sağda */
   align-items: center;
   padding: 0 20px; /* Padding'i burada tutabilirsin artık */
-  margin: 0 auto; /* Ortalamayı garantiye al */
+  padding: 20px 20px 0 20px; /* Üstten 20px, sağdan 20px, alttan 0, soldan 20px */
+  margin: 0 auto;
 }
 
 .logo{
